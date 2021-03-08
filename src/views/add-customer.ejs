@@ -1,0 +1,54 @@
+<%- include ('partials/_header') -%>
+
+<div class="container">
+
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h2>Add a Customer</h2>
+          <form action="/add-customer" method="post">
+            <div class="form-group">
+              <label for="First Name">First Name:</label>
+              <input class="form-control" type="text" name="First Name" placeholder="Insert First Name">
+            </div>
+            <div class="form-group">
+              <label for="Last Name">Last Name:</label>
+              <input class="form-control" type="text" name="Last Name" placeholder="Insert Last Name">
+            </div>
+            <div class="form-group">
+              <label for="Email">Email:</label>
+              <input class="form-control" type="text" name="Email" placeholder="Insert Email">
+            </div>
+            <div class="form-group">
+              <label for="Phone Number">Phone Number:</label>
+              <input class="form-control" type="text" name="Phone Number" placeholder="Insert Phone Number">
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Add
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+        <div class="row">
+          <p>Pre-populate</p>
+          <a href="/pre-populate/<%= 1000 %>"
+            class="btn btn-submit">
+            1000
+          </a>
+          <a href="/pre-populate/<%= 10000 %>"
+            class="btn btn-submit">
+            10000
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+</div>
+<%- include('partials/_footer') -%>
